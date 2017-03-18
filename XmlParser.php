@@ -30,7 +30,7 @@ class XmlParser extends Object implements ParserInterface
      * @param string|\SimpleXMLElement $xml xml to process.
      * @return array XML array representation.
      */
-    protected function convertXmlToArray($xml)
+    public function convertXmlToArray($xml)
     {
         if (!is_object($xml)) {
             $xml = simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA);
